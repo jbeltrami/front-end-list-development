@@ -6,20 +6,54 @@
 
       <!-- Do not add `link` tags unless you know what you are doing -->
       <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
+      <link href="https://fonts.googleapis.com/css?family=Eagle+Lake" rel="stylesheet">
       <!-- Do not add `script` tags unless you know what you are doing -->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body class="container-fluid">
-      <h1>Example</h1>
+<body>
+<div class="container">
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
-    </body>
+	<nav class="navbar navbar-default">
+	      <a href="#" class="nav navbar-nav navbar-right"><div class="logout">Logout</div></a>
+	      <a href="#" class="nav navbar-nav navbar-right"><div class="changePass">Change Password</div></a>
+	</nav>
+
+	<div class="sign-in-screen">
+
+		<div class="interactive-message">Welcome to your goals list, where your dreams come true!
+		</div>
+
+		<form>
+  			<div class="form-group">
+    			<label for="exampleInputEmail1">Email address</label>
+    			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  			</div>
+			<div class="form-group">
+			  <label for="exampleInputPassword1">Password</label>
+			  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+			</div>
+
+			<button type="submit" class="btn btn-default">Login</button>
+			<div class="sign-up-link">
+			<a href="#">Sign-up? Click here</a>
+			</div>
+		</form>
+	</div>
+
+	<div class="list-screen">
+		<table class="table table-condensed">
+			<tr>
+			  <td>John</td>
+			  <td>Doe</td>
+			</tr>
+			<tr>
+			  <td>Jane</td>
+			  <td>Doe</td>
+			</tr>
+		</table>
+	</div>
+
+</div>
+</body>
 </html>
