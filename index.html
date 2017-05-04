@@ -11,49 +11,49 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-<body>
-<div class="container">
 
-	<nav class="navbar navbar-default">
-	      <a href="#" class="nav navbar-nav navbar-right"><div class="logout">Logout</div></a>
-	      <a href="#" class="nav navbar-nav navbar-right"><div class="changePass">Change Password</div></a>
-	</nav>
+    <body class="container-fluid">
 
-	<div class="sign-in-screen">
+        <form id="sign-up">
+          <fieldset>
+            <legend>Sign up!</legend>
+            <form>
+              <input name="credentials[email]" type="text" placeholder="an@example.email">
+              <input name="credentials[password]" type="password" placeholder="password">
+              <input name="credentials[password_confirmation]" type="password" placeholder="password confirmation">
+              <input type="submit" name="submit" value="Sign up!">
+            </form>
+          </fieldset>
+        </form>
 
-		<div class="interactive-message">Welcome to your goals list, where your dreams come true!
-		</div>
+        <form id="sign-in">
+          <fieldset>
+            <legend>Sign in!</legend>
+            <form>
+          <input name="credentials[email]" type="text" placeholder="an@example.email">
+          <input name="credentials[password]" type="password" placeholder="password">
+          <input type="submit" name="submit" value="Sign in!">
+          </form>
+          </fieldset>
+        </form>
 
-		<form>
-  			<div class="form-group">
-    			<label for="exampleInputEmail1">Email address</label>
-    			<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-  			</div>
-			<div class="form-group">
-			  <label for="exampleInputPassword1">Password</label>
-			  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-			</div>
+        <form id="changepw">
+            <fieldset>
+              <legend>Change password!</legend>
+              <input type="password" name="passwords[old]" placeholder="old password">
+              <input type="password" name="passwords[new]" placeholder="new password">
+              <input type="submit" name="submit" value="Change password!">
+            </fieldset>
+        </form>
 
-			<button type="submit" class="btn btn-default">Login</button>
-			<div class="sign-up-link">
-			<a href="#">Sign-up? Click here</a>
-			</div>
-		</form>
-	</div>
+        <form id="sign-out">
+            <fieldset>
+              <legend>Sign-out!</legend>
+              <input type="submit" name="submit" value="Sign Out">
+            </fieldset>
+          </form> <br/>
 
-	<div class="list-screen">
-		<table class="table table-condensed">
-			<tr>
-			  <td>John</td>
-			  <td>Doe</td>
-			</tr>
-			<tr>
-			  <td>Jane</td>
-			  <td>Doe</td>
-			</tr>
-		</table>
-	</div>
+        <div class="auth-message"></div>
 
-</div>
-</body>
+    </body>
 </html>
