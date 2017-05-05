@@ -10,13 +10,13 @@ const resetFields = function () {
 }
 
 const signUpSuccess = (data) => {
-  console.log(data)
   $('#auth-message').text('Thanks for signing up')
+  $('.sign-in-screen').css('display', 'block')
+  $('.sign-up-screen').hide()
   resetFields()
 }
 
 const signUpFailure = (data) => {
-  console.log(data)
   $('#auth-message').text('Sign up didn\'t work')
   resetFields()
 }
@@ -27,20 +27,21 @@ const signInSuccess = (data) => {
   $('#auth-message').text('Thanks for signing in')
   $('.sign-in-screen').hide()
   $('.navbar').css('display', 'block')
-  $('.add-wish').css('display', 'block')
+  $('.wish-buttons').css('display', 'block')
+  $('.sign-up-screen').hide()
   // store the user object
   store.user = data.user
 }
 
 const signInFailure = (data) => {
-  $('#auth-message').text('Sign in didn\'t work')
+  // $('#auth-message').text('Sign in didn\'t work')
   resetFields()
-  console.log(data)
 }
 
 const changePWSuccess = (data) => {
   resetFields()
-  console.log(data)
+  $('.change-pass-screen').hide()
+  $('.wish-buttons').css('display', 'block')
 }
 
 const changePWFailure = (data) => {
@@ -52,7 +53,7 @@ const signOutSuccess = (data) => {
   resetFields()
   $('.sign-in-screen').css('display', 'block')
   $('.navbar').hide()
-  $('.add-wish').hide()
+  $('.wish-buttons').hide()
   $('.add-wish-screen').hide()
 }
 
