@@ -53,6 +53,15 @@ const onGetWishes = function (event) {
     .catch(ui.getWishesFailure)
 }
 
+const onGetWish = function (event) {
+  const data = getFormFields(event.target)
+  console.log(data.wishes.id)
+  event.preventDefault()
+  api.getWish(data.wishes.id)
+    .then(ui.getWishSuccess)
+    .catch(ui.getWishFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
@@ -60,6 +69,7 @@ const addHandlers = () => {
   $('#sign-out').on('submit', onSignOut)
   $('#create-wish').on('submit', onCreateWish)
   $('#get-wishes').on('click', onGetWishes)
+  $('#get-wish').on('submit', onGetWish)
 }
 
 module.exports = {

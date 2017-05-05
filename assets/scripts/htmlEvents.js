@@ -12,6 +12,11 @@ const addHandlers = () => {
     $('.wish-buttons').hide()
   })
 
+  $('.read-wish').on('click', function () {
+    $('.read-one-wish').css('display', 'block')
+    $('.wish-buttons').hide()
+  })
+
   $('.create-account').on('click', function () {
     $('.sign-in-screen').hide()
     $('.sign-up-screen').css('display', 'block')
