@@ -85,9 +85,10 @@
           <button class="btn btn-default add-wish" type="submit">Add Wish</button> <br/>
           <button class="btn btn-default read-wishes" id="get-wishes" type="submit">See your Wishes</button> <br/>
           <button class="btn btn-default read-wish" type="submit">Remember one of your wishes</button> <br/>
-          <button class="btn btn-default update-wish" type="submit">Update a Wish</button> <br/>
+          <button class="btn btn-default change-wish" type="submit">Update a Wish</button> <br/>
           <button class="btn btn-default delete-wish" type="submit">Delete Wish</button> <br/>
         </div>
+      </div>
 
       <form id="create-wish">
         <div class="add-wish-screen">
@@ -102,8 +103,14 @@
           <input type="submit" class="btn btn-default read-wish-button" value="Get wish">
         </div>
       </form>
-    </div>
 
+      <form id="update-wish">
+        <div class="change-wish-screen">
+          <input name="wishes[id]" type="text" placeholder="Type in the number of your wish" class="form-control"><br/>
+          <input name="wish[goal]" type="text" placeholder="Change your wish" class="form-control"><br/>
+          <input type="submit" class="btn btn-default update-wish-button" value="Update wish">
+        </div>
+      </form>
 
     </body>
 </html>
