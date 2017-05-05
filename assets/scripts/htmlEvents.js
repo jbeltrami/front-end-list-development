@@ -5,10 +5,10 @@ const addHandlers = () => {
     $('.change-pass-screen').css('display', 'block')
   })
   $('.add-wish').on('click', function () {
-    $('.add-wish-screen').css('display', 'block')
+    $('.wish-screen').css('display', 'block')
   })
   $('#create-list').on('click', function () {
-    $('.add-wish-screen').hide()
+    $('.wish-screen').hide()
   })
 }
 
