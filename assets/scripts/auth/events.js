@@ -38,7 +38,6 @@ const onSignOut = function (event) {
 }
 
 const onCreateWish = function (event) {
-  console.log('button works')
   const data = getFormFields(event.target)
   event.preventDefault()
   api.createWish(data)
@@ -51,7 +50,7 @@ const addHandlers = () => {
   $('#sign-in').on('submit', onSignIn)
   $('#changepw').on('submit', onChangePW)
   $('#sign-out').on('submit', onSignOut)
-  $('#create-wish').on('click', onCreateWish)
+  $('#create-wish').on('submit', onCreateWish)
 }
 
 module.exports = {

@@ -18,7 +18,7 @@ const addHandlers = () => {
   })
 
 // make sure to comment this out when API request is set up to create-wish
-  $('#create-wish').on('click', function () {
+  $('.create-wish-button').on('click', function () {
     $('.add-wish-screen').hide()
     $('.wish-buttons').css('display', 'block')
   })
