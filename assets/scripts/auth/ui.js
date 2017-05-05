@@ -69,6 +69,13 @@ const createWishFailure = (data) => {
   console.log(data)
 }
 
+const getWishesSuccess = (data) => {
+  console.log(data)
+}
+const getWishesFailure = (data) => {
+  console.log(data)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -79,5 +86,7 @@ module.exports = {
   signOutSuccess,
   signOutFailure,
   createWishSuccess,
-  createWishFailure
+  createWishFailure,
+  getWishesSuccess,
+  getWishesFailure
 }

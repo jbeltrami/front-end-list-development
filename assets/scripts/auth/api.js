@@ -51,10 +51,21 @@ const createWish = (data) => {
   })
 }
 
+const getWishes = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/wishes',
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePW,
   signOut,
-  createWish
+  createWish,
+  getWishes
 }
