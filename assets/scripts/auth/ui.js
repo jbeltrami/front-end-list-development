@@ -23,11 +23,11 @@ const signUpFailure = (data) => {
 
 // makes all the buttons appear.
 const signInSuccess = (data) => {
-  console.log(data)
-  $('#auth-message').text('Thanks for signing in')
   resetFields()
+  $('#auth-message').text('Thanks for signing in')
   $('.sign-in-screen').hide()
   $('.navbar').css('display', 'block')
+  $('.add-wish').css('display', 'block')
   // store the user object
   store.user = data.user
 }
@@ -50,7 +50,8 @@ const changePWFailure = (data) => {
 
 const signOutSuccess = (data) => {
   resetFields()
-  console.log(data)
+  $('.sign-in-screen').css('display', 'block')
+  $('.navbar').hide()
 }
 
 const signOutFailure = (data) => {
