@@ -37,11 +37,21 @@ const onSignOut = function (event) {
     .catch(ui.signOutFailure)
 }
 
+const onCreateWish = function (event) {
+  console.log('button works')
+  const data = getFormFields(event.target)
+  event.preventDefault()
+  api.createWish(data)
+    .then(ui.createWishSuccess)
+    .catch(ui.createWishFailure)
+}
+
 const addHandlers = () => {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#changepw').on('submit', onChangePW)
   $('#sign-out').on('submit', onSignOut)
+  $('#create-wish').on('click', onCreateWish)
 }
 
 module.exports = {

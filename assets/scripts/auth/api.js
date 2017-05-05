@@ -40,9 +40,20 @@ const signOut = (data) => {
   })
 }
 
+const createWish = (data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/wishes/',
+    method: 'POST',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
   changePW,
-  signOut
+  signOut,
+  createWish
 }

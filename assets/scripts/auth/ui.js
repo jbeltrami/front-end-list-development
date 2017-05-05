@@ -62,6 +62,13 @@ const signOutFailure = (data) => {
   console.log(data)
 }
 
+const createWishSuccess = (data) => {
+  console.log(data)
+}
+const createWishFailure = (data) => {
+  console.log(data)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -70,5 +77,7 @@ module.exports = {
   changePWSuccess,
   changePWFailure,
   signOutSuccess,
-  signOutFailure
+  signOutFailure,
+  createWishSuccess,
+  createWishFailure
 }
