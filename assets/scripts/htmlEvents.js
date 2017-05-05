@@ -17,6 +17,12 @@ const addHandlers = () => {
     $('.wish-buttons').hide()
   })
 
+// make sure to comment this out when UI is done
+  $('.read-wish-button').on('click', function () {
+    $('.read-one-wish').hide()
+    $('.wish-buttons').css('display', 'block')
+  })
+
   $('.create-account').on('click', function () {
     $('.sign-in-screen').hide()
     $('.sign-up-screen').css('display', 'block')
@@ -25,6 +31,17 @@ const addHandlers = () => {
 // make sure to comment this out when API request is set up to create-wish
   $('.create-wish-button').on('click', function () {
     $('.add-wish-screen').hide()
+    $('.wish-buttons').css('display', 'block')
+  })
+
+  $('.change-wish').on('click', function () {
+    $('.change-wish-screen').css('display', 'block')
+    $('.wish-buttons').hide()
+  })
+
+// make sure to comment this out when UI is done
+  $('.update-wish-button').on('click', function () {
+    $('.change-wish-screen').hide()
     $('.wish-buttons').css('display', 'block')
   })
 }
