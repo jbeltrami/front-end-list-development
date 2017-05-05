@@ -7,6 +7,9 @@ const addHandlers = () => {
   $('.add-wish').on('click', function () {
     $('.add-wish-screen').css('display', 'block')
   })
+  $('#create-list').on('click', function () {
+    $('.add-wish-screen').hide()
+  })
 }
 
 module.exports = {

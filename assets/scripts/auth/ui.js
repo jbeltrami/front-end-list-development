@@ -52,6 +52,8 @@ const signOutSuccess = (data) => {
   resetFields()
   $('.sign-in-screen').css('display', 'block')
   $('.navbar').hide()
+  $('.add-wish').hide()
+  $('.add-wish-screen').hide()
 }
 
 const signOutFailure = (data) => {
