@@ -26,6 +26,8 @@ const signInSuccess = (data) => {
   console.log(data)
   $('#auth-message').text('Thanks for signing in')
   resetFields()
+  $('.sign-in-screen').hide()
+  $('.navbar').css('display', 'block')
   // store the user object
   store.user = data.user
 }
