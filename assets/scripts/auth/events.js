@@ -55,7 +55,6 @@ const onGetWishes = function (event) {
 
 const onGetWish = function (event) {
   const data = getFormFields(event.target)
-  console.log(data.wishes.id)
   event.preventDefault()
   api.getWish(data.wishes.id)
     .then(ui.getWishSuccess)
