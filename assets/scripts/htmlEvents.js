@@ -46,6 +46,17 @@ const addHandlers = () => {
   })
 }
 
+$('.delete-wish').on('click', function () {
+  $('.delete-wish-screen').css('display', 'block')
+  $('.wish-buttons').hide()
+})
+
+// make sure to comment this out when UI is done
+$('.delete-wish-button').on('click', function () {
+  $('.delete-wish-screen').hide()
+  $('.wish-buttons').css('display', 'block')
+})
+
 module.exports = {
   addHandlers
 }
