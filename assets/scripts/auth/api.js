@@ -71,6 +71,18 @@ const getWish = (id) => {
   })
 }
 
+// make this a update wish
+const updateWish = (id, data) => {
+  return $.ajax({
+    url: config.apiOrigin + '/wishes/' + id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   signUp,
   signIn,
@@ -78,5 +90,6 @@ module.exports = {
   signOut,
   createWish,
   getWishes,
-  getWish
+  getWish,
+  updateWish
 }

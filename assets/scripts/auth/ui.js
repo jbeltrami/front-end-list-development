@@ -83,6 +83,13 @@ const getWishFailure = (data) => {
   console.log(data)
 }
 
+const updateWishSuccess = (data) => {
+  console.log(data)
+}
+const updateWishFailure = (data) => {
+  console.log(data)
+}
+
 module.exports = {
   signUpSuccess,
   signUpFailure,
@@ -97,5 +104,7 @@ module.exports = {
   getWishesSuccess,
   getWishesFailure,
   getWishSuccess,
-  getWishFailure
+  getWishFailure,
+  updateWishSuccess,
+  updateWishFailure
 }
