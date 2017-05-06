@@ -64,10 +64,18 @@ const onGetWish = function (event) {
 const onUpdateWish = function (event) {
   const data = getFormFields(event.target)
   event.preventDefault()
-  console.log(data)
   api.updateWish(data.wishes.id, data)
     .then(ui.updateWishSuccess)
     .catch(ui.updateWishFailure)
+}
+
+const onDeleteWish = function (event) {
+  const data = getFormFields(event.target)
+  event.preventDefault()
+  console.log(data)
+  api.deleteWish(data.wishes.id)
+    .then(ui.deleteWishSuccess)
+    .catch(ui.deleteWishFailure)
 }
 
 const addHandlers = () => {
@@ -79,6 +87,7 @@ const addHandlers = () => {
   $('#get-wishes').on('click', onGetWishes)
   $('#get-wish').on('submit', onGetWish)
   $('#update-wish').on('submit', onUpdateWish)
+  $('#destroy-wish').on('submit', onDeleteWish)
 }
 
 module.exports = {
