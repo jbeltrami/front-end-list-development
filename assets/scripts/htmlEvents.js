@@ -7,6 +7,14 @@ const addHandlers = () => {
     $('.wish-buttons').hide()
   })
 
+  $('.back-to-menu').on('click', function () {
+    $('.add-wish-screen').hide()
+    $('.read-one-wish').hide()
+    $('.change-wish-screen').hide()
+    $('.delete-wish-screen').hide()
+    $('.wish-buttons').css('display', 'block')
+  })
+
   $('.add-wish').on('click', function () {
     $('.add-wish-screen').css('display', 'block')
     $('.wish-buttons').hide()
