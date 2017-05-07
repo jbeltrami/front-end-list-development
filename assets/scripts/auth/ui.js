@@ -10,21 +10,21 @@ const resetFields = function () {
 }
 
 const signUpSuccess = (data) => {
-  $('#auth-message').text('Thanks for signing up')
+  // $('#auth-message').text('Thanks for signing up')
   $('.sign-in-screen').css('display', 'block')
   $('.sign-up-screen').hide()
   resetFields()
 }
 
 const signUpFailure = (data) => {
-  $('#auth-message').text('Sign up didn\'t work')
+  // $('#auth-message').text('Sign up didn\'t work')
   resetFields()
 }
 
 // makes all the buttons appear.
 const signInSuccess = (data) => {
   resetFields()
-  $('#auth-message').text('Thanks for signing in')
+  // $('#auth-message').text('Thanks for signing in')
   $('.sign-in-screen').hide()
   $('.navbar').css('display', 'block')
   $('.wish-buttons').css('display', 'block')
