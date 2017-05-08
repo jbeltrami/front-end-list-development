@@ -72,7 +72,6 @@ const onUpdateWish = function (event) {
 const onDeleteWish = function (event) {
   const data = getFormFields(event.target)
   event.preventDefault()
-  console.log(data)
   api.deleteWish(data.wishes.id)
     .then(ui.deleteWishSuccess)
     .catch(ui.deleteWishFailure)

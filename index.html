@@ -26,11 +26,11 @@
         <form id="sign-in">
           <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
-            <input name="credentials[email]" type="text" placeholder="Username" class="form-control">
+            <input name="credentials[email]" type="text" placeholder="Username" class="form-control reset">
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input name="credentials[password]" type="password" placeholder="password" class="form-control">
+            <input name="credentials[password]" type="password" placeholder="password" class="form-control reset">
           </div>
             <input type="submit" class="btn btn-default" name="submit" value="Sign in">
         </form>
@@ -44,17 +44,17 @@
         <form id="sign-up">
               <div class="form-group">
                 <label for="exampleInputEmail1">Username</label>
-                <input name="credentials[email]" type="text" placeholder="Create a username" class="form-control">
+                <input name="credentials[email]" type="text" placeholder="Create a username" class="form-control reset">
               </div>
 
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input name="credentials[password]" type="password" placeholder="password" class="form-control">
+                <input name="credentials[password]" type="password" placeholder="password" class="form-control reset">
               </div>
 
               <div class="form-group">
                 <label for="exampleInputPassword1">Password Confirmation</label>
-                <input name="credentials[password]" type="password" placeholder="password" class="form-control">
+                <input name="credentials[password]" type="password" placeholder="password" class="form-control reset">
               </div>
 
               <input type="submit" class="btn btn-default" name="submit" value="Sign up!">
@@ -65,12 +65,12 @@
         <form id="changepw">
           <div class="form-group">
             <label for="exampleInputPassword1">Old Password</label>
-            <input type="password" name="passwords[old]" placeholder="old password" class="form-control">
+            <input type="password" name="passwords[old]" placeholder="old password" class="form-control reset">
           </div>
 
           <div class="form-group">
             <label for="exampleInputPassword1">New Password</label>
-            <input type="password" name="passwords[new]" placeholder="new password" class="form-control">
+            <input type="password" name="passwords[new]" placeholder="new password" class="form-control reset">
           </div>
 
             <input type="submit" class="btn btn-default" name="submit"  value="Change password!">
@@ -80,7 +80,7 @@
 
         <div class="wish-buttons">
         <div class="btn-group">
-          <button class="btn btn-primary add-wish46" type="submit">Add Wish</button>
+          <button class="btn btn-primary add-wish" type="submit">Add Wish</button>
           <button class="btn btn-primary read-wishes" id="get-wishes" type="submit">See your Wishes</button>
           <button class="btn btn-primary read-wish" type="submit">Remember one of your wishes</button>
           <button class="btn btn-primary change-wish" type="submit">Update a Wish</button>
@@ -90,7 +90,7 @@
 
       <div class="add-wish-screen">
         <form id="create-wish">
-          <input name="wish[goal]" type="text" placeholder="Make a wish" class="form-control"><br/>
+          <input name="wish[goal]" type="text" placeholder="Make a wish" class="form-control reset"><br/>
           <input type="submit" class="btn btn-default create-wish-button" value="Add wish">
         </form> <br/>
           <!-- <input type="submit" class="btn btn-default back-to-menu" value="Back to menu"> -->
@@ -98,7 +98,7 @@
 
       <div class="read-one-wish">
         <form id="get-wish">
-          <input name="wishes[id]" type="text" placeholder="Type in the number of your wish" class="form-control"><br/>
+          <input name="wishes[id]" type="text" placeholder="Type in the number of your wish" class="form-control reset"><br/>
           <input type="submit" class="btn btn-default read-wish-button" value="Get wish">
         </form> <br/>
           <!-- <input type="submit" class="btn btn-default back-to-menu" value="Back to menu"> -->
@@ -106,8 +106,8 @@
 
       <div class="change-wish-screen">
         <form id="update-wish">
-          <input name="wishes[id]" type="text" placeholder="Type in the number of your wish" class="form-control"><br/>
-          <input name="wish[goal]" type="text" placeholder="Change your wish" class="form-control"><br/>
+          <input name="wishes[id]" type="text" placeholder="Type in the number of your wish" class="form-control reset"><br/>
+          <input name="wish[goal]" type="text" placeholder="Change your wish" class="form-control reset"><br/>
           <input type="submit" class="btn btn-default update-wish-button" value="Update wish">
         </form> <br/>
           <!-- <input type="submit" class="btn btn-default back-to-menu" value="Back to menu"> -->
@@ -116,7 +116,7 @@
 
       <div class="delete-wish-screen">
         <form id="destroy-wish">
-          <input name="wishes[id]" type="text" placeholder="Type in the number of your wish" class="form-control"><br/>
+          <input name="wishes[id]" type="text" placeholder="Type in the number of your wish" class="form-control reset"><br/>
           <input type="submit" class="btn btn-default delete-wish-button" value="Delete wish">
         </form> <br/>
           <!-- <input type="submit" class="btn btn-default back-to-menu" value="Back to menu"> -->

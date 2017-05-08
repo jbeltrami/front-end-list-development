@@ -3,6 +3,7 @@
      <tr>
        <th>Wish Number</th>
        <th>Wish</th>
+       <th>Delete</th>
      </tr>
   </thead>
 
@@ -11,6 +12,9 @@
     <tr>
       <td>{{wish.id}}</td>
       <td>{{wish.goal}}</td>
+      <td>
+        <button data-id="{{wish.id}}" class="btn btn-danger destroy-wish">Delete Wish</button>
+      </td>
     </tr>
     {{/each}}
   </tbody>

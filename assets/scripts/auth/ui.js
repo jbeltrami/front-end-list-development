@@ -2,6 +2,8 @@
 
 const store = require('../store.js')
 
+const api = require('./api.js')
+
 const getWishesTable = require('../get-wishes.handlebars')
 
 const resetFields = function () {
@@ -13,6 +15,7 @@ const resetFields = function () {
   document.getElementById('get-wish').reset()
   document.getElementById('update-wish').reset()
   document.getElementById('destroy-wish').reset()
+  $('.reset').empty()
 }
 
 const signUpSuccess = (data) => {
@@ -78,16 +81,21 @@ const signOutFailure = (data) => {
 }
 
 const createWishSuccess = (data) => {
-  console.log(data)
+  $('#wishes-content').empty()
+  $('#wishes-content').text('You just create a new wish!')
 }
 const createWishFailure = (data) => {
-  console.log(data)
+  $('#wishes-content').text('Oops! something went wrong! Could you try again?')
 }
 
 const getWishesSuccess = (data) => {
   $('#wishes-content').empty()
   const indexWishes = getWishesTable({ wishes: data.wishes })
   $('#wishes-content').append(indexWishes)
+  $('[data-id]').on('click', function () {
+    $(this).parent().parent().css({'display': 'none'})
+    api.deleteWish(this.dataset.id)
+  })
 }
 const getWishesFailure = (data) => {
   console.log(data)
