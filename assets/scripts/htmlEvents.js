@@ -1,12 +1,12 @@
 'use strict'
 
-const hideScreens = function () {
-  $('.add-wish-screen').hide()
-  $('.read-one-wish').hide()
-  $('.change-wish-screen').hide()
-  $('.delete-wish-screen').hide()
-  $('.change-pass-screen').hide()
-}
+// const hideScreens = function () {
+//   $('.add-wish-screen').hide()
+//   $('.read-one-wish').hide()
+//   $('.change-wish-screen').hide()
+//   $('.delete-wish-screen').hide()
+//   $('.change-pass-screen').hide()
+// }
 
 // const resetInputs = function () {
 //   document.getElementByTagName('input').reset()
@@ -49,7 +49,7 @@ const addHandlers = () => {
   })
 
   $('.change-pass').on('click', function () {
-    $('#auth-message').hide()
+    $('#wishes-content').hide()
     $('.wish-buttons').hide()
     $('.change-pass-screen').css('display', 'block')
   })

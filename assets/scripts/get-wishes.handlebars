@@ -1,0 +1,18 @@
+ <table id="wishes-table" class="table">
+   <thead>
+     <tr>
+       <th>Wish Number</th>
+       <th>Wish</th>
+     </tr>
+  </thead>
+
+  <tbody id="wishes-table-body">
+    {{#each wishes as |wish|}}
+    <tr>
+      <td>{{wish.id}}</td>
+      <td>{{wish.goal}}</td>
+    </tr>
+    {{/each}}
+  </tbody>
+
+ </table>

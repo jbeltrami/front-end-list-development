@@ -2,6 +2,8 @@
 
 const store = require('../store.js')
 
+const getWishesTable = require('../get-wishes.handlebars')
+
 const resetFields = function () {
   document.getElementById('sign-up').reset()
   document.getElementById('sign-in').reset()
@@ -14,33 +16,33 @@ const resetFields = function () {
 }
 
 const signUpSuccess = (data) => {
-  // $('#auth-message').text('Thanks for signing up')
+  // $('#wishes-content').text('Thanks for signing up')
   $('.sign-in-screen').css('display', 'block')
   $('.sign-up-screen').hide()
   resetFields()
 }
 
 const signUpFailure = (data) => {
-  // $('#auth-message').text('Sign up didn\'t work')
+  // $('#wishes-content').text('Sign up didn\'t work')
   resetFields()
 }
 
 // makes all the buttons appear.
 const signInSuccess = (data) => {
   resetFields()
-  // $('#auth-message').text('Thanks for signing in')
+  // $('#wishes-content').text('Thanks for signing in')
   $('.sign-in-screen').hide()
   $('.navbar').css('display', 'block')
   $('.wish-buttons').css('display', 'block')
   $('.sign-up-screen').hide()
-  $('#auth-message').css('display', 'block')
-  $('#auth-message').text('Welcome! Make a wish!')
+  $('#wishes-content').css('display', 'block')
+  $('#wishes-content').text('Welcome! Make a wish!')
   // store the user object
   store.user = data.user
 }
 
 const signInFailure = (data) => {
-  // $('#auth-message').text('Sign in didn\'t work')
+  // $('#wishes-content').text('Sign in didn\'t work')
   resetFields()
 }
 
@@ -48,8 +50,8 @@ const changePWSuccess = (data) => {
   resetFields()
   $('.change-pass-screen').hide()
   $('.wish-buttons').css('display', 'block')
-  $('#auth-message').css('display', 'block')
-  $('#auth-message').text('Your password has been changed.')
+  $('#wishes-content').css('display', 'block')
+  $('#wishes-content').text('Your password has been changed.')
 }
 
 const changePWFailure = (data) => {
@@ -67,7 +69,7 @@ const signOutSuccess = (data) => {
   $('.read-one-wish').hide()
   $('.change-wish-screen').hide()
   $('.delete-wish-screen').hide()
-  $('#auth-message').hide()
+  $('#wishes-content').hide()
 }
 
 const signOutFailure = (data) => {
@@ -83,7 +85,9 @@ const createWishFailure = (data) => {
 }
 
 const getWishesSuccess = (data) => {
-  console.log(data)
+  $('#wishes-content').empty()
+  const indexWishes = getWishesTable({ wishes: data.wishes })
+  $('#wishes-content').append(indexWishes)
 }
 const getWishesFailure = (data) => {
   console.log(data)
