@@ -140,14 +140,14 @@ const updateWishSuccess = (data) => {
   $('#wishes-content').text('You just updated your wish!')
 }
 const updateWishFailure = (data) => {
-  console.log(data)
+  $('#wishes-content').text('Make sure you have the correct wish number to update.')
 }
 
 const deleteWishSuccess = (data) => {
-  console.log(data)
+  $('#wishes-content').text('Wish deleted')
 }
 const deleteWishFailure = (data) => {
-  console.log(data)
+  $('#wishes-content').text('Deletion didn\'t go well! Try again.')
 }
 
 module.exports = {
