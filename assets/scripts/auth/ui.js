@@ -7,6 +7,10 @@ const resetFields = function () {
   document.getElementById('sign-in').reset()
   document.getElementById('changepw').reset()
   document.getElementById('sign-out').reset()
+  document.getElementById('create-wish').reset()
+  document.getElementById('get-wish').reset()
+  document.getElementById('update-wish').reset()
+  document.getElementById('destroy-wish').reset()
 }
 
 const signUpSuccess = (data) => {
@@ -29,6 +33,8 @@ const signInSuccess = (data) => {
   $('.navbar').css('display', 'block')
   $('.wish-buttons').css('display', 'block')
   $('.sign-up-screen').hide()
+  $('#auth-message').css('display', 'block')
+  $('#auth-message').text('Welcome! Make a wish!')
   // store the user object
   store.user = data.user
 }
@@ -42,6 +48,8 @@ const changePWSuccess = (data) => {
   resetFields()
   $('.change-pass-screen').hide()
   $('.wish-buttons').css('display', 'block')
+  $('#auth-message').css('display', 'block')
+  $('#auth-message').text('Your password has been changed.')
 }
 
 const changePWFailure = (data) => {
@@ -53,8 +61,13 @@ const signOutSuccess = (data) => {
   resetFields()
   $('.sign-in-screen').css('display', 'block')
   $('.navbar').hide()
+  $('.change-pass-screen').hide()
   $('.wish-buttons').hide()
   $('.add-wish-screen').hide()
+  $('.read-one-wish').hide()
+  $('.change-wish-screen').hide()
+  $('.delete-wish-screen').hide()
+  $('#auth-message').hide()
 }
 
 const signOutFailure = (data) => {

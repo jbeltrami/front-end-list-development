@@ -34,7 +34,7 @@ nav {
 	display: block;
 	position: relative;
 	transform: translate(0%, 100%);
-	margin: auto;
+	margin: 10px auto;
 	background-color: rgba(79,144,193, 0.9);
 	width: 80%;
 	border: 10px;
@@ -46,7 +46,7 @@ nav {
   display: none;
   position: relative;
   transform: translate(0%, 100%);
-  margin: auto;
+  margin: 10px auto;
   background-color: rgba(79,144,193, 0.9);
   width: 80%;
   border: 10px;
@@ -58,7 +58,7 @@ nav {
   display: none;
   position: relative;
   transform: translate(0%, 100%);
-  margin: auto;
+  margin: 10px auto;
   background-color: rgba(79,144,193, 0.9);
   width: 80%;
   border: 10px;
@@ -75,7 +75,7 @@ nav {
   display: none;
   position: relative;
   // transform: translate(0%, 100%);
-  margin: auto;
+  margin: 10px auto;
   background-color: rgba(79,144,193, 0.9);
   width: 80%;
   border: 10px;
@@ -87,7 +87,7 @@ nav {
   display: none;
   position: relative;
   // transform: translate(0%, 100%);
-  margin: auto;
+  margin: 10px auto;
   background-color: rgba(79,144,193, 0.9);
   width: 80%;
   border: 10px;
@@ -99,7 +99,7 @@ nav {
   display: none;
   position: relative;
   // transform: translate(0%, 100%);
-  margin: auto;
+  margin: 10px auto;
   background-color: rgba(79,144,193, 0.9);
   width: 80%;
   border: 10px;
@@ -111,7 +111,7 @@ nav {
   display: none;
   position: relative;
   // transform: translate(0%, 100%);
-  margin: auto;
+  margin: 10px auto;
   background-color: rgba(79,144,193, 0.9);
   width: 80%;
   border: 10px;
@@ -120,9 +120,14 @@ nav {
 }
 
 #auth-message {
-	position: relative;
-	margin: 0 auto;
-	padding: 10px;
-	border: 1px;
-	text-align: center;
+  display: none;
+  position: relative;
+  // transform: translate(0%, 100%);
+  margin: 10px auto;
+  background-color: rgba(79,144,193, 0.9);
+  width: 80%;
+  border: 10px;
+  padding: 15px;
+  border: 1px white solid;
+  text-align: center;
 }
