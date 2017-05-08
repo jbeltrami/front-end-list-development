@@ -2,7 +2,7 @@
 
 const config = {
   apiOrigins: {
-    production: 'https://tranquil-stream-75403.herokuapp.com/',
+    production: 'https://tranquil-stream-75403.herokuapp.com',
     development: 'http://localhost:4741'
   }
 }
