@@ -56,7 +56,7 @@ nav {
 
 .change-pass-screen {
   display: none;
-  position: relative;
+  position: fixed;
   transform: translate(0%, 100%);
   margin: 10px auto;
   background-color: rgba(79,144,193, 0.9);

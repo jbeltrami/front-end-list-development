@@ -4,7 +4,8 @@ const store = require('../store.js')
 
 const api = require('./api.js')
 
-const getWishesTable = require('../get-wishes.handlebars')
+const getWishesTable = require('../templates/get-wishes.handlebars')
+const getSingleWish = require('../templates/get-single-wish.handlebars')
 
 const resetFields = function () {
   document.getElementById('sign-up').reset()
@@ -59,7 +60,8 @@ const changePWSuccess = (data) => {
 
 const changePWFailure = (data) => {
   resetFields()
-  console.log(data)
+  $('#wishes-content').css('display', 'block')
+  $('#wishes-content').text('Please provide a different combination.')
 }
 
 const signOutSuccess = (data) => {
@@ -92,24 +94,50 @@ const getWishesSuccess = (data) => {
   $('#wishes-content').empty()
   const indexWishes = getWishesTable({ wishes: data.wishes })
   $('#wishes-content').append(indexWishes)
-  $('[data-id]').on('click', function () {
+  $('.destroy-wish').on('click', function () {
     $(this).parent().parent().css({'display': 'none'})
     api.deleteWish(this.dataset.id)
   })
+
+  $('.update-wish').on('click', function () {
+    $('.change-wish-screen').css('display', 'block')
+    $('.add-wish-screen').hide()
+    $('.read-one-wish').hide()
+    $('.delete-wish-screen').hide()
+  })
 }
+
 const getWishesFailure = (data) => {
-  console.log(data)
+  $('#wishes-content').text('Oops! something went wrong! Make sure you\'re connected to the internet ')
 }
 
 const getWishSuccess = (data) => {
-  console.log(data)
+  $('#wishes-content').empty()
+  $('.read-one-wish').css('display', 'none')
+  console.log(data.wish.id)
+  const indexWishes = getSingleWish({ wish: data.wish })
+  $('#wishes-content').append(indexWishes)
+  $('.destroy-wish').on('click', function () {
+    $(this).parent().parent().css({'display': 'none'})
+    api.deleteWish(this.dataset.id)
+  })
+
+  $('.update-wish').on('click', function () {
+    $('.change-wish-screen').css('display', 'block')
+    $('.add-wish-screen').hide()
+    $('.read-one-wish').hide()
+    $('.delete-wish-screen').hide()
+  })
 }
+
 const getWishFailure = (data) => {
-  console.log(data)
+  $('#wishes-content').text("Try another number! Make sure to hit 'See your wishes' first")
 }
 
 const updateWishSuccess = (data) => {
-  console.log(data)
+  $('#wishes-content').empty()
+  $('.change-wish-screen').hide()
+  $('#wishes-content').text('You just updated your wish!')
 }
 const updateWishFailure = (data) => {
   console.log(data)

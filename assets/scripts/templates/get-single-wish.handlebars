@@ -1,0 +1,24 @@
+<table id="wish-table" class="table">
+  <thead>
+    <tr>
+      <th>Wish Number</th>
+      <th>Wish</th>
+      <th>Delete</th>
+      <th>Update</th>
+    </tr>
+ </thead>
+
+ <tbody id="wish-table-body">
+   <tr>
+     <td>{{wish.id}}</td>
+     <td>{{wish.goal}}</td>
+     <td>
+       <button data-id="{{wish.id}}" class="btn btn-danger destroy-wish">Delete Wish</button>
+     </td>
+     <td>
+       <button data-id="{{wish.id}}" class="btn btn-warning update-wish">Update Wish</button>
+     </td>
+   </tr>
+ </tbody>
+
+</table>

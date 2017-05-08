@@ -25,6 +25,7 @@ const addHandlers = () => {
     $('.read-one-wish').hide()
     $('.change-wish-screen').hide()
     $('.delete-wish-screen').hide()
+    $('#wishes-content').text('Writing down a wish is the best way to start accomplishing it')
   })
 
   $('.read-wish').on('click', function () {
@@ -32,25 +33,30 @@ const addHandlers = () => {
     $('.add-wish-screen').hide()
     $('.change-wish-screen').hide()
     $('.delete-wish-screen').hide()
+    $('#wishes-content').text('It is always good to remember what you wish for, is it not?')
   })
 
-  $('.change-wish').on('click', function () {
-    $('.change-wish-screen').css('display', 'block')
-    $('.add-wish-screen').hide()
-    $('.read-one-wish').hide()
-    $('.delete-wish-screen').hide()
-  })
+  // $('.change-wish').on('click', function () {
+  //   $('.change-wish-screen').css('display', 'block')
+  //   $('.add-wish-screen').hide()
+  //   $('.read-one-wish').hide()
+  //   $('.delete-wish-screen').hide()
+  // })
 
-  $('.delete-wish').on('click', function () {
-    $('.delete-wish-screen').css('display', 'block')
-    $('.add-wish-screen').hide()
-    $('.read-one-wish').hide()
-    $('.change-wish-screen').hide()
-  })
+  // $('.delete-wish').on('click', function () {
+  //   $('.delete-wish-screen').css('display', 'block')
+  //   $('.add-wish-screen').hide()
+  //   $('.read-one-wish').hide()
+  //   $('.change-wish-screen').hide()
+  // })
 
   $('.change-pass').on('click', function () {
     $('#wishes-content').hide()
     $('.wish-buttons').hide()
+    $('.add-wish-screen').hide()
+    $('.read-one-wish').hide()
+    $('.change-wish-screen').hide()
+    $('.delete-wish-screen').hide()
     $('.change-pass-screen').css('display', 'block')
   })
 }
