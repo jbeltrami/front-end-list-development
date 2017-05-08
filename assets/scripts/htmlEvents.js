@@ -18,7 +18,16 @@ const addHandlers = () => {
     $('.sign-up-screen').css('display', 'block')
   })
 
-  // $('.back-to-menu').on('click', hideScreens())
+  $('.back-to-menu-buttons').on('click', function () {
+    $('.change-pass-screen').hide()
+    $('.wish-buttons').css('display', 'block')
+    $('#wishes-content').css('display', 'block')
+  })
+
+  $('.back-to-menu').on('click', function () {
+    $('.sign-up-screen').hide()
+    $('.sign-in-screen').css('display', 'block')
+  })
 
   $('.add-wish').on('click', function () {
     $('.add-wish-screen').css('display', 'block')
