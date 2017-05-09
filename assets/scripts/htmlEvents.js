@@ -15,6 +15,7 @@
 const addHandlers = () => {
   $('.create-account').on('click', function () {
     $('.sign-in-screen').hide()
+    $('#wishes-content').hide()
     $('.sign-up-screen').css('display', 'block')
   })
 
@@ -26,6 +27,7 @@ const addHandlers = () => {
 
   $('.back-to-menu').on('click', function () {
     $('.sign-up-screen').hide()
+    $('#wishes-content').hide()
     $('.sign-in-screen').css('display', 'block')
   })
 
