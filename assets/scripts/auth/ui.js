@@ -45,7 +45,7 @@ const signInSuccess = (data) => {
 }
 
 const signInFailure = (data) => {
-  // $('#wishes-content').text('Sign in didn\'t work')
+  $('#wishes-content').text('Sign up didn\'t work. Make sure your passwords match')
   resetFields()
 }
 
