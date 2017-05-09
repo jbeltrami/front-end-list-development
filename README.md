@@ -6,6 +6,11 @@ https://jbeltrami.github.io/front-end-list-development/
 #TECHNOLOGIES:
   This project was developed using HTML, CSS/SCSS, Javascript, JQuery, CURL, AJAX, Handlebars, Bootstraps.
 
+#FUNCTIONALITY
+  For this project, I build a wish list for the user to keep track of wishes/accomplishments.
+  It it possible to create a wish and access that wish (or wishes) on a table format later on. The user can also update and delete a specific wish at any given time.
+  Future versions will turn this app into a new years resolution list, with accomplishment status and comments.
+
 #PLANNING/DEVELOPMENT PROCESS:
   Followed the guidelines provided by G.A. consultants:
 - Started with User Stories and Wireframes.
