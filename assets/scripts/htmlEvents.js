@@ -15,7 +15,7 @@
 const addHandlers = () => {
   $('.create-account').on('click', function () {
     $('.sign-in-screen').hide()
-    $('#wishes-content').hide()
+    $('#wishes-content').text('You can create your account by typing a username and a password. Make sure that you passwords match.')
     $('.sign-up-screen').css('display', 'block')
   })
 
@@ -27,7 +27,7 @@ const addHandlers = () => {
 
   $('.back-to-menu').on('click', function () {
     $('.sign-up-screen').hide()
-    $('#wishes-content').hide()
+    $('#wishes-content').text('Welcome to your wish list! To proceed, please sign-up or sign-in if you already have an account.')
     $('.sign-in-screen').css('display', 'block')
   })
 

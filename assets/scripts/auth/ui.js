@@ -4,8 +4,6 @@ const store = require('../store.js')
 
 const api = require('./api.js')
 
-// const events = require('./events.js')
-
 const getWishesTable = require('../templates/get-wishes.handlebars')
 const getSingleWish = require('../templates/get-single-wish.handlebars')
 
@@ -76,8 +74,7 @@ const signOutSuccess = (data) => {
   $('.read-one-wish').hide()
   $('.change-wish-screen').hide()
   $('.delete-wish-screen').hide()
-  $('#wishes-content').empty()
-  $('#wishes-content').hide()
+  $('#wishes-content').text('Welcome to your wish list! To proceed, please sign-up or sign-in if you already have an account.')
 }
 
 const signOutFailure = (data) => {
@@ -98,10 +95,14 @@ const createWishFailure = (data) => {
 const getWishesSuccess = (data) => {
   resetFields()
   $('#wishes-content').empty()
-  const indexWishes = getWishesTable({ wishes: data.wishes })
+  const indexWishes = getWishesTable({
+    wishes: data.wishes
+  })
   $('#wishes-content').append(indexWishes)
   $('.destroy-wish').on('click', function () {
-    $(this).parent().parent().css({'display': 'none'})
+    $(this).parent().parent().css({
+      'display': 'none'
+    })
     api.deleteWish(this.dataset.id)
   })
 
@@ -122,11 +123,14 @@ const getWishSuccess = (data) => {
   resetFields()
   $('#wishes-content').empty()
   $('.read-one-wish').css('display', 'none')
-  console.log(data.wish.id)
-  const indexWishes = getSingleWish({ wish: data.wish })
+  const indexWishes = getSingleWish({
+    wish: data.wish
+  })
   $('#wishes-content').append(indexWishes)
   $('.destroy-wish').on('click', function () {
-    $(this).parent().parent().css({'display': 'none'})
+    $(this).parent().parent().css({
+      'display': 'none'
+    })
     api.deleteWish(this.dataset.id)
   })
 
