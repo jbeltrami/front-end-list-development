@@ -33,7 +33,7 @@ nav {
 .sign-in-screen {
 	display: block;
 	position: relative;
-	transform: translate(0%, 100%);
+	transform: translate(0%, 50%);
 	margin: 10px auto;
 	background-color: rgba(79,144,193, 0.9);
 	width: 80%;
@@ -45,7 +45,7 @@ nav {
 .sign-up-screen {
   display: none;
   position: relative;
-  transform: translate(0%, 100%);
+  transform: translate(0%, 47.5%);
   margin: 10px auto;
   background-color: rgba(79,144,193, 0.9);
   width: 80%;
@@ -57,13 +57,14 @@ nav {
 .change-pass-screen {
   display: none;
   position: fixed;
-  transform: translate(0%, 100%);
+  transform: translate(12.5%, 50%);
   margin: 10px auto;
   background-color: rgba(79,144,193, 0.9);
   width: 80%;
   border: 10px;
   padding: 15px;
   border: 1px white solid;
+
 }
 
 .wish-buttons {
