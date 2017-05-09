@@ -4,6 +4,8 @@ const store = require('../store.js')
 
 const api = require('./api.js')
 
+// const events = require('./events.js')
+
 const getWishesTable = require('../templates/get-wishes.handlebars')
 const getSingleWish = require('../templates/get-single-wish.handlebars')
 
@@ -34,7 +36,6 @@ const signUpFailure = (data) => {
 // makes all the buttons appear.
 const signInSuccess = (data) => {
   resetFields()
-  // $('#wishes-content').text('Thanks for signing in')
   $('.sign-in-screen').hide()
   $('.navbar').css('display', 'block')
   $('.wish-buttons').css('display', 'block')
@@ -75,6 +76,7 @@ const signOutSuccess = (data) => {
   $('.read-one-wish').hide()
   $('.change-wish-screen').hide()
   $('.delete-wish-screen').hide()
+  $('#wishes-content').empty()
   $('#wishes-content').hide()
 }
 
