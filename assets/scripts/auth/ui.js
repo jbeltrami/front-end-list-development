@@ -16,7 +16,6 @@ const resetFields = function () {
   document.getElementById('get-wish').reset()
   document.getElementById('update-wish').reset()
   document.getElementById('destroy-wish').reset()
-  $('.reset').empty()
 }
 
 const signUpSuccess = (data) => {
@@ -85,12 +84,15 @@ const signOutFailure = (data) => {
 const createWishSuccess = (data) => {
   $('#wishes-content').empty()
   $('#wishes-content').text('You just create a new wish!')
+  resetFields()
 }
 const createWishFailure = (data) => {
   $('#wishes-content').text('Oops! something went wrong! Could you try again?')
+  resetFields()
 }
 
 const getWishesSuccess = (data) => {
+  resetFields()
   $('#wishes-content').empty()
   const indexWishes = getWishesTable({ wishes: data.wishes })
   $('#wishes-content').append(indexWishes)
@@ -108,10 +110,12 @@ const getWishesSuccess = (data) => {
 }
 
 const getWishesFailure = (data) => {
+  resetFields()
   $('#wishes-content').text('Oops! something went wrong! Make sure you\'re connected to the internet ')
 }
 
 const getWishSuccess = (data) => {
+  resetFields()
   $('#wishes-content').empty()
   $('.read-one-wish').css('display', 'none')
   console.log(data.wish.id)
@@ -131,22 +135,27 @@ const getWishSuccess = (data) => {
 }
 
 const getWishFailure = (data) => {
+  resetFields()
   $('#wishes-content').text("Try another number! Make sure to hit 'See your wishes' first")
 }
 
 const updateWishSuccess = (data) => {
+  resetFields()
   $('#wishes-content').empty()
   $('.change-wish-screen').hide()
   $('#wishes-content').text('You just updated your wish!')
 }
 const updateWishFailure = (data) => {
+  resetFields()
   $('#wishes-content').text('Make sure you have the correct wish number to update.')
 }
 
 const deleteWishSuccess = (data) => {
+  resetFields()
   $('#wishes-content').text('Wish deleted')
 }
 const deleteWishFailure = (data) => {
+  resetFields()
   $('#wishes-content').text('Deletion didn\'t go well! Try again.')
 }
 
