@@ -3,6 +3,8 @@
 #URL: The result of this project can be seen in the following URL:
 https://jbeltrami.github.io/front-end-list-development/
 
+Back-end repo:https://github.com/jbeltrami/list-project-api
+
 #TECHNOLOGIES:
   This project was developed using HTML, CSS/SCSS, Javascript, JQuery, CURL, AJAX, Handlebars, Bootstraps.
 
