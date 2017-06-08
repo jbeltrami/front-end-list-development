@@ -74,6 +74,7 @@ const signOutSuccess = (data) => {
   $('.read-one-wish').hide()
   $('.change-wish-screen').hide()
   $('.delete-wish-screen').hide()
+  $('#wishes-content').css('display', 'block')
   $('#wishes-content').text('Welcome to your wish list! To proceed, please sign-up or sign-in if you already have an account.')
 }
 
